@@ -16,4 +16,4 @@ projekt je baziran na [youtube tutorialu](https://www.youtube.com/watch?v=snnEtC
 
 ove promjene su podigle tocnost sa **63.9%** (iz tutoriala) na **76.1%**.
 
-*napomena:* na grafu 'training_curves.png' se vidi overfitting vec nakon 21. epohe. tu val_loss prestaje padati, dok train_acc nastavlja rasti do 85%, sto znaci da je model nakon toga samo ucio napamet trening podatke.
+*napomena:* na grafu 'training_curves.png' se vidi overfitting vec nakon 21. epohe. tu val_loss prestaje padati, dok train_acc nastavlja rasti do 85%.
