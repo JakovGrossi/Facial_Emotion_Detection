@@ -1,4 +1,4 @@
-prepoznavanje emocija preko web kamere
+**Face Emotion Recognition App**
 
 aplikacija prepoznaje emocije u stvarnom vremenu preko web kamere. model je treniran u pytorch-u kroz cnn arhitekturu, dok opencv sluzi za detekciju lica na video streamu.
 
