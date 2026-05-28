@@ -8,9 +8,9 @@ projekt je baziran na [youtube tutorialu](https://www.youtube.com/watch?v=snnEtC
 
 ### sto je promjenjeno u odnosu na tutorial:
 
-    * **rezolucija slika:** zadrzano je originalnih 96x96 piksela (u tutorialu je smanjeno na 64x64).
-    * **dublja mreža:** dodan je 5. cnn sloj (sa 512 filtara) za bolje izvlacenje znacajki.
-    * **duze treniranje:** broj epoha je podignut na 70 uz dodan early stopping.
+    * rezolucija slika: zadrzano je originalnih 96x96 piksela (u tutorialu je smanjeno na 64x64).
+    * dublja mreža: dodan je 5. cnn sloj (sa 512 filtara) za bolje izvlacenje znacajki.
+    * duze treniranje: broj epoha je podignut na 70 uz dodan early stopping.
 
 ### rezultati i overfitting:
 
