@@ -1,26 +1,19 @@
-Aplikacija za preoznavanje emoicija preko web kamere.
+prepoznavanje emocija preko web kamere
 
-Ovaj projekt je aplikacija za prepoznavanje emocija u stvarnom vremenu preko web kamere. Model je treniran u PyTorch-u (CNN arhitektura), a za detekciju lica na videu koristi se OpenCV.
+aplikacija prepoznaje emocije u stvarnom vremenu preko web kamere. model je treniran u pytorch-u kroz cnn arhitekturu, dok opencv sluzi za detekciju lica na video streamu.
 
-Projekt je rađen prema YouTube tutorialu (https://www.youtube.com/watch?v=snnEtCiDeiE&list=LL&index=5) i dataset sa Kaggle-a (https://www.kaggle.com/datasets/fahadullaha/facial-emotion-recognition-dataset), ali uz nekoliko izmjena koje su poboljšale rezultat.
-Što je promijenjeno u odnosu na tutorial
+kod i pokretanje se nalaze u `FaceEmotionRecognitionApp.ipynb`, a grafovi u `training_curves.png` i `confusion_matrix.png`.
 
-    Veličina slika: Zadržana je originalna rezolucija od 96x96 piksela, dok je u tutorialu smanjena na 64x64.
+projekt je baziran na [youtube tutorialu](https://www.youtube.com/watch?v=snnEtCiDeiE&list=LL&index=5) i [kaggle datasetu](https://www.kaggle.com/datasets/fahadullaha/facial-emotion-recognition-dataset), ali uz par izmjena da se poboljsa tocnost.
 
-    Arhitektura mreže: Iskoršten je dublji model s 5 CNN slojeva.
+### sto je promjenjeno u odnosu na tutorial:
 
-    Treniranje: Broj epoha je povećan na 70 uz uključen Early Stopping.
+    * **rezolucija slika:** zadrzano je originalnih 96x96 piksela (u tutorialu je smanjeno na 64x64).
+    * **dublja mreža:** dodan je 5. cnn sloj (sa 512 filtara) za bolje izvlacenje znacajki.
+    * **duze treniranje:** broj epoha je podignut na 70 uz dodan early stopping.
 
-Rezultati i Overfitting
+### rezultati i overfitting:
 
-Zahvaljujući ovim promjenama, model je postigao bolju točnost na validacijskom skupu:
+ove promjene su podigle tocnost sa **63.9%** (iz tutoriala) na **76.1%**.
 
-    Točnost u tutorialu: 63.9%
-
-    Moja točnost: 76.1%
-
-Napomena o treniranju
-
-Iako je konačni rezultat bolji, na grafu training_curves.png jasno se vidi overfitting nakon 25. epohe. Gubitak na validaciji tu prestaje padati i lagano raste, dok točnost na trening skupu nastavlja rasti prema gore.
-
-Pokretanje se vidi u datoteci FaceEmotionRecognitionApp.ipynb, dok su grafovi performansi spremljeni u datotekama training_curves.png i confusion_matrix.png.
+*napomena:* na grafu `training_curves.png` se vidi overfitting nakon 25. epohe. val_loss tu prestaje padati i lagano raste, dok train_acc ide skroz do vrha, sto znaci da je model tu dosegao svoj maksimum za generalizaciju.
